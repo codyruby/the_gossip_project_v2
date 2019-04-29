@@ -10,6 +10,9 @@
             <% @user_first_name = @users.find(gossip.user_id) %>
             <%= @user_first_name.first_name %></h5>
             <p class="card-text"><%= gossip.title %></p>
+
+<!-- Liens vers les différentes pages qui dépendent du gossip -->
+            <%= link_to "Go to this Gossip Page", gossip_path(id: gossip.id), :class => "btn btn-primary" %><br /><br />
         </div>
     </div>
 <% end %>
