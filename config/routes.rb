@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'gossip/index'
+
+  get 'gossip/show'
+
   get 'user/index'
 
-  get 'user/show'
+  get 'gossip/:id', to: 'user#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
