@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'teams/index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
-  resources :user do 
-    resources :gossip 
+  resources :users do 
+    resources :gossips 
   end
 
 
@@ -11,5 +13,5 @@ Rails.application.routes.draw do
   get 'welcome/:id', to: 'welcome#index'
   get '/team', to: 'team#index'
   get '/contact', to: 'contact#index'
-  root "home#index"
+  root "homes#index"
 end
